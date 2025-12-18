@@ -1,0 +1,701 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\alexl\\source\\repos\\API1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\controllers\\langileacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\controllers\\langileacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\repositorioak\\eskaerakrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\repositorioak\\eskaerakrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\repositorioak\\langileakrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\repositorioak\\langileakrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\repositorioak\\zerbitzuarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\repositorioak\\zerbitzuarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\modeloak\\langileak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\modeloak\\langileak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\mapeoak\\langileakmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\mapeoak\\langileakmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\mapeoak\\zerbitzuamap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\mapeoak\\zerbitzuamap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\dto-ak\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\dto-ak\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\dto-ak\\langileadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\dto-ak\\langileadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\dto-ak\\langileasortudto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\dto-ak\\langileasortudto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\dto-ak\\langileaupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\dto-ak\\langileaupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\nhibernate\\nhibernatehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\nhibernate\\nhibernatehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\controllers\\eskaeracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\controllers\\eskaeracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\controllers\\zerbitzuacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\controllers\\zerbitzuacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\dto-ak\\eskaeraupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\dto-ak\\eskaeraupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\dto-ak\\eskaerasortudto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\dto-ak\\eskaerasortudto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\dto-ak\\eskaeradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\dto-ak\\eskaeradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\mapeoak\\eskaerakmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\mapeoak\\eskaerakmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\dto-ak\\zerbitzuaupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\dto-ak\\zerbitzuaupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\dto-ak\\zerbitzuasortudto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\dto-ak\\zerbitzuasortudto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\dto-ak\\zerbitzuadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\dto-ak\\zerbitzuadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\modeloak\\eskaerak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\modeloak\\eskaerak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\controllers\\erreserbacontrollercs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\controllers\\erreserbacontrollercs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\modeloak\\zerbitzua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\modeloak\\zerbitzua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\modeloak\\erreserbak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\modeloak\\erreserbak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\mapeoak\\erreserbakmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\mapeoak\\erreserbakmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\api1.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\api1.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\dto-ak\\erresrbadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\dto-ak\\erresrbadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\dto-ak\\erreserbasortudto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\dto-ak\\erreserbasortudto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\dto-ak\\erreserbaupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\dto-ak\\erreserbaupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\repositorioak\\erreserbakrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\repositorioak\\erreserbakrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\nhibernate\\isession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\nhibernate\\isession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\api1.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\api1.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|c:\\users\\alexl\\source\\repos\\api1\\api1\\api1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{05043C6E-D298-4FFA-AA8C-437C240511EF}|API1\\API1.csproj|solutionrelative:api1\\api1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LangileakRepository.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Repositorioak\\LangileakRepository.cs",
+              "RelativeDocumentMoniker": "API1\\Repositorioak\\LangileakRepository.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Repositorioak\\LangileakRepository.cs",
+              "RelativeToolTip": "API1\\Repositorioak\\LangileakRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:21:29.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\LoginDto.cs",
+              "RelativeDocumentMoniker": "API1\\DTO-ak\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\LoginDto.cs",
+              "RelativeToolTip": "API1\\DTO-ak\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:21:07.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LangileaSortuDto.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\LangileaSortuDto.cs",
+              "RelativeDocumentMoniker": "API1\\DTO-ak\\LangileaSortuDto.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\LangileaSortuDto.cs",
+              "RelativeToolTip": "API1\\DTO-ak\\LangileaSortuDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:26:24.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LangileaDto.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\LangileaDto.cs",
+              "RelativeDocumentMoniker": "API1\\DTO-ak\\LangileaDto.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\LangileaDto.cs",
+              "RelativeToolTip": "API1\\DTO-ak\\LangileaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:20:26.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LangileakMap.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Mapeoak\\LangileakMap.cs",
+              "RelativeDocumentMoniker": "API1\\Mapeoak\\LangileakMap.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Mapeoak\\LangileakMap.cs",
+              "RelativeToolTip": "API1\\Mapeoak\\LangileakMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:19:50.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ZerbitzuaMap.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Mapeoak\\ZerbitzuaMap.cs",
+              "RelativeDocumentMoniker": "API1\\Mapeoak\\ZerbitzuaMap.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Mapeoak\\ZerbitzuaMap.cs",
+              "RelativeToolTip": "API1\\Mapeoak\\ZerbitzuaMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:21:50.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Langileak.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Modeloak\\Langileak.cs",
+              "RelativeDocumentMoniker": "API1\\Modeloak\\Langileak.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Modeloak\\Langileak.cs",
+              "RelativeToolTip": "API1\\Modeloak\\Langileak.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:19:14.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EskaeraController.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Controllers\\EskaeraController.cs",
+              "RelativeDocumentMoniker": "API1\\Controllers\\EskaeraController.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Controllers\\EskaeraController.cs",
+              "RelativeToolTip": "API1\\Controllers\\EskaeraController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAiwHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:25:53.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ZerbitzuaController.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Controllers\\ZerbitzuaController.cs",
+              "RelativeDocumentMoniker": "API1\\Controllers\\ZerbitzuaController.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Controllers\\ZerbitzuaController.cs",
+              "RelativeToolTip": "API1\\Controllers\\ZerbitzuaController.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAiwGsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:25:32.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ZerbitzuaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Repositorioak\\ZerbitzuaRepository.cs",
+              "RelativeDocumentMoniker": "API1\\Repositorioak\\ZerbitzuaRepository.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Repositorioak\\ZerbitzuaRepository.cs",
+              "RelativeToolTip": "API1\\Repositorioak\\ZerbitzuaRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAwwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:24:50.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EskaerakRepository.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Repositorioak\\EskaerakRepository.cs",
+              "RelativeDocumentMoniker": "API1\\Repositorioak\\EskaerakRepository.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Repositorioak\\EskaerakRepository.cs",
+              "RelativeToolTip": "API1\\Repositorioak\\EskaerakRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:25:08.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LangileaController.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Controllers\\LangileaController.cs",
+              "RelativeDocumentMoniker": "API1\\Controllers\\LangileaController.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Controllers\\LangileaController.cs*",
+              "RelativeToolTip": "API1\\Controllers\\LangileaController.cs*",
+              "ViewState": "AgIAAGcAAAAAAAAAAAApwIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:22:00.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LangileaUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\LangileaUpdateDto.cs",
+              "RelativeDocumentMoniker": "API1\\DTO-ak\\LangileaUpdateDto.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\LangileaUpdateDto.cs",
+              "RelativeToolTip": "API1\\DTO-ak\\LangileaUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:20:50.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NHibernateHelper.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\NHibernate\\NHibernateHelper.cs",
+              "RelativeDocumentMoniker": "API1\\NHibernate\\NHibernateHelper.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\NHibernate\\NHibernateHelper.cs",
+              "RelativeToolTip": "API1\\NHibernate\\NHibernateHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:27:34.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Program.cs",
+              "RelativeDocumentMoniker": "API1\\Program.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Program.cs",
+              "RelativeToolTip": "API1\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T13:56:23.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EskaeraUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\EskaeraUpdateDto.cs",
+              "RelativeDocumentMoniker": "API1\\DTO-ak\\EskaeraUpdateDto.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\EskaeraUpdateDto.cs",
+              "RelativeToolTip": "API1\\DTO-ak\\EskaeraUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:24:23.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EskaeraSortuDto.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\EskaeraSortuDto.cs",
+              "RelativeDocumentMoniker": "API1\\DTO-ak\\EskaeraSortuDto.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\EskaeraSortuDto.cs",
+              "RelativeToolTip": "API1\\DTO-ak\\EskaeraSortuDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:24:05.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EskaeraDto.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\EskaeraDto.cs",
+              "RelativeDocumentMoniker": "API1\\DTO-ak\\EskaeraDto.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\EskaeraDto.cs",
+              "RelativeToolTip": "API1\\DTO-ak\\EskaeraDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:23:48.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ZerbitzuaUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\ZerbitzuaUpdateDto.cs",
+              "RelativeDocumentMoniker": "API1\\DTO-ak\\ZerbitzuaUpdateDto.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\ZerbitzuaUpdateDto.cs",
+              "RelativeToolTip": "API1\\DTO-ak\\ZerbitzuaUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:23:18.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ZerbitzuaSortuDto.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\ZerbitzuaSortuDto.cs",
+              "RelativeDocumentMoniker": "API1\\DTO-ak\\ZerbitzuaSortuDto.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\ZerbitzuaSortuDto.cs",
+              "RelativeToolTip": "API1\\DTO-ak\\ZerbitzuaSortuDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:22:59.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ZerbitzuaDto.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\ZerbitzuaDto.cs",
+              "RelativeDocumentMoniker": "API1\\DTO-ak\\ZerbitzuaDto.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\ZerbitzuaDto.cs",
+              "RelativeToolTip": "API1\\DTO-ak\\ZerbitzuaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:22:36.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EskaerakMap.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Mapeoak\\EskaerakMap.cs",
+              "RelativeDocumentMoniker": "API1\\Mapeoak\\EskaerakMap.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Mapeoak\\EskaerakMap.cs",
+              "RelativeToolTip": "API1\\Mapeoak\\EskaerakMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:22:08.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Eskaerak.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Modeloak\\Eskaerak.cs",
+              "RelativeDocumentMoniker": "API1\\Modeloak\\Eskaerak.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Modeloak\\Eskaerak.cs",
+              "RelativeToolTip": "API1\\Modeloak\\Eskaerak.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:20:31.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ErreserbaControllercs.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Controllers\\ErreserbaControllercs.cs",
+              "RelativeDocumentMoniker": "API1\\Controllers\\ErreserbaControllercs.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Controllers\\ErreserbaControllercs.cs",
+              "RelativeToolTip": "API1\\Controllers\\ErreserbaControllercs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T15:17:11.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Zerbitzua.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Modeloak\\Zerbitzua.cs",
+              "RelativeDocumentMoniker": "API1\\Modeloak\\Zerbitzua.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Modeloak\\Zerbitzua.cs",
+              "RelativeToolTip": "API1\\Modeloak\\Zerbitzua.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:11:30.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ErresrbaDto.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\ErresrbaDto.cs",
+              "RelativeDocumentMoniker": "API1\\DTO-ak\\ErresrbaDto.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\ErresrbaDto.cs",
+              "RelativeToolTip": "API1\\DTO-ak\\ErresrbaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T15:11:22.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "API1\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "API1\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T13:56:19.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "API1.http",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\API1.http",
+              "RelativeDocumentMoniker": "API1\\API1.http",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\API1.http",
+              "RelativeToolTip": "API1\\API1.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-12-10T14:29:24.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\appsettings.json",
+              "RelativeDocumentMoniker": "API1\\appsettings.json",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\appsettings.json",
+              "RelativeToolTip": "API1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-10T13:56:22.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ErreserbakMap.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Mapeoak\\ErreserbakMap.cs",
+              "RelativeDocumentMoniker": "API1\\Mapeoak\\ErreserbakMap.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Mapeoak\\ErreserbakMap.cs",
+              "RelativeToolTip": "API1\\Mapeoak\\ErreserbakMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T15:10:36.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Erreserbak.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Modeloak\\Erreserbak.cs",
+              "RelativeDocumentMoniker": "API1\\Modeloak\\Erreserbak.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Modeloak\\Erreserbak.cs",
+              "RelativeToolTip": "API1\\Modeloak\\Erreserbak.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T15:09:39.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ErreserbaSortuDto.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\ErreserbaSortuDto.cs",
+              "RelativeDocumentMoniker": "API1\\DTO-ak\\ErreserbaSortuDto.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\ErreserbaSortuDto.cs",
+              "RelativeToolTip": "API1\\DTO-ak\\ErreserbaSortuDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T15:11:49.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ErreserbaUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\ErreserbaUpdateDto.cs",
+              "RelativeDocumentMoniker": "API1\\DTO-ak\\ErreserbaUpdateDto.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\DTO-ak\\ErreserbaUpdateDto.cs",
+              "RelativeToolTip": "API1\\DTO-ak\\ErreserbaUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T15:13:57.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "API1\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\WeatherForecast.cs",
+              "RelativeToolTip": "API1\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T14:54:17.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ErreserbakRepository.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Repositorioak\\ErreserbakRepository.cs",
+              "RelativeDocumentMoniker": "API1\\Repositorioak\\ErreserbakRepository.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Repositorioak\\ErreserbakRepository.cs",
+              "RelativeToolTip": "API1\\Repositorioak\\ErreserbakRepository.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAmwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T15:16:20.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ISession.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\NHibernate\\ISession.cs",
+              "RelativeDocumentMoniker": "API1\\NHibernate\\ISession.cs",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\NHibernate\\ISession.cs",
+              "RelativeToolTip": "API1\\NHibernate\\ISession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T15:29:03.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "API1\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\appsettings.Development.json",
+              "RelativeToolTip": "API1\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-16T14:56:24.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "API1\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\Properties\\launchSettings.json",
+              "RelativeToolTip": "API1\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-16T14:54:02.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "API1",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\API1.csproj",
+              "RelativeDocumentMoniker": "API1\\API1.csproj",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\API1.csproj",
+              "RelativeToolTip": "API1\\API1.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-10T13:56:16.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "API1.csproj",
+              "DocumentMoniker": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\API1.csproj",
+              "RelativeDocumentMoniker": "API1\\API1.csproj",
+              "ToolTip": "C:\\Users\\alexl\\source\\repos\\API1\\API1\\API1.csproj",
+              "RelativeToolTip": "API1\\API1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-10T14:17:48.017Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
