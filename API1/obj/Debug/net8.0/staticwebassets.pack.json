@@ -1,0 +1,113 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Agua_Bezoya.png",
+      "PackagePath": "staticwebassets\\irudiak\\Agua_Bezoya.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Aquarius.png",
+      "PackagePath": "staticwebassets\\irudiak\\Aquarius.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Coca-Cola.png",
+      "PackagePath": "staticwebassets\\irudiak\\Coca-Cola.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Donuts.png",
+      "PackagePath": "staticwebassets\\irudiak\\Donuts.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Fanta_Limon.png",
+      "PackagePath": "staticwebassets\\irudiak\\Fanta_Limon.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Haribo_Gominolas.png",
+      "PackagePath": "staticwebassets\\irudiak\\Haribo_Gominolas.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Kas_Laranja.png",
+      "PackagePath": "staticwebassets\\irudiak\\Kas_Laranja.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Kas_Limon.png",
+      "PackagePath": "staticwebassets\\irudiak\\Kas_Limon.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Kinder_Bueno.png",
+      "PackagePath": "staticwebassets\\irudiak\\Kinder_Bueno.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\KitKat.png",
+      "PackagePath": "staticwebassets\\irudiak\\KitKat.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\M&M.png",
+      "PackagePath": "staticwebassets\\irudiak\\M&M.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Milka_Txokolatea.png",
+      "PackagePath": "staticwebassets\\irudiak\\Milka_Txokolatea.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Nestea.png",
+      "PackagePath": "staticwebassets\\irudiak\\Nestea.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Oreo.png",
+      "PackagePath": "staticwebassets\\irudiak\\Oreo.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Red_Bull.png",
+      "PackagePath": "staticwebassets\\irudiak\\Red_Bull.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Sagardo.png",
+      "PackagePath": "staticwebassets\\irudiak\\Sagardo.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Sugus.png",
+      "PackagePath": "staticwebassets\\irudiak\\Sugus.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Twix.png",
+      "PackagePath": "staticwebassets\\irudiak\\Twix.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Txupa_Txups.png",
+      "PackagePath": "staticwebassets\\irudiak\\Txupa_Txups.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\Zumo_Laranja.png",
+      "PackagePath": "staticwebassets\\irudiak\\Zumo_Laranja.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\ardoa.png",
+      "PackagePath": "staticwebassets\\irudiak\\ardoa.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\estrella.png",
+      "PackagePath": "staticwebassets\\irudiak\\estrella.png"
+    },
+    {
+      "Id": "C:\\skfkjskfn\\Lanak\\2. Urtea\\1. Ebaluazioa\\Erronka\\API\\API1\\API1\\wwwroot\\irudiak\\kafea.png",
+      "PackagePath": "staticwebassets\\irudiak\\kafea.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.API1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.API1.props",
+      "PackagePath": "build\\API1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.API1.props",
+      "PackagePath": "buildMultiTargeting\\API1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.API1.props",
+      "PackagePath": "buildTransitive\\API1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
