@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using API1.DTO_ak;
 using API1.Modeloak;
-using API1.Repositorioak;
+using NHibernate.Linq;
+
+using NHSession = NHibernate.ISession;
 
 namespace API1.Controllers
 {
@@ -11,97 +14,123 @@ namespace API1.Controllers
     [Route("api/[controller]")]
     public class ZerbitzuaController : ControllerBase
     {
-        private readonly ZerbitzuaRepository _repo;
+        private readonly NHSession _session;
 
-        public ZerbitzuaController(ZerbitzuaRepository repo)
+        public ZerbitzuaController(NHSession session)
         {
-            _repo = repo;
+            _session = session;
         }
 
-        // GET api/Zerbitzua
-        [HttpGet]
-        public ActionResult<IEnumerable<ZerbitzuaDto>> GetAll()
+        [HttpGet("mahaia/{mahaiaId:int}")]
+        public ActionResult<IEnumerable<ZerbitzuaDto>> GetByMahai(int mahaiaId)
         {
-            var list = _repo.GetAll()
-                .Select(z => new ZerbitzuaDto
-                {
-                    Id = z.Id,
-                    Izena = z.Izena,
-                    Prezioa = z.Prezioa
-                })
+            var zerbitzuak = _session.Query<Zerbitzua>()
+                .Where(z => z.MahaiakId == mahaiaId)
+                .OrderByDescending(z => z.Data)
                 .ToList();
 
-            return Ok(list);
-        }
-
-        // GET api/Zerbitzua/5
-        [HttpGet("{id:int}")]
-        public ActionResult<ZerbitzuaDto> GetById(int id)
-        {
-            var entity = _repo.GetById(id);
-            if (entity == null) return NotFound();
-
-            var dto = new ZerbitzuaDto
+            var dtoList = zerbitzuak.Select(z => new ZerbitzuaDto
             {
-                Id = entity.Id,
-                Izena = entity.Izena,
-                Prezioa = entity.Prezioa
-            };
+                Id = z.Id,
+                PrezioTotala = z.PrezioTotala,
+                Data = z.Data,
+                ErreserbaId = z.ErreserbaId,
+                MahaiakId = z.MahaiakId,
+                Eskaerak = _session.Query<Eskaerak>()
+                    .Where(e => e.ZerbitzuaId == z.Id)
+                    .Select(e => new EskaerakDto
+                    {
+                        Id = e.Id,
+                        ProduktuaId = e.ProduktuaId,
+                        Izena = e.Izena,
+                        Prezioa = e.Prezioa,
+                        Data = e.Data,
+                        Egoera = e.Egoera
+                    })
+                    .ToList()
+            }).ToList();
 
-            return Ok(dto);
+            return Ok(dtoList);
         }
 
-        // POST api/Zerbitzua
         [HttpPost]
         public ActionResult<ZerbitzuaDto> Create([FromBody] ZerbitzuaSortuDto dto)
         {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
-
-            var entity = new Zerbitzua
+            using (var tx = _session.BeginTransaction())
             {
-                Izena = dto.Izena,
-                Prezioa = dto.Prezioa
-            };
+                var entity = new Zerbitzua
+                {
+                    PrezioTotala = dto.PrezioTotala,
+                    Data = dto.Data,
+                    ErreserbaId = dto.ErreserbaId,
+                    MahaiakId = dto.MahaiakId
+                };
 
-            _repo.Add(entity);
+                _session.Save(entity);
 
-            var result = new ZerbitzuaDto
-            {
-                Id = entity.Id,
-                Izena = entity.Izena,
-                Prezioa = entity.Prezioa
-            };
+                foreach (var e in dto.Eskaerak)
+                {
+                    var eskaera = new Eskaerak
+                    {
+                        ProduktuaId = e.ProduktuaId,
+                        Izena = e.Izena,
+                        Prezioa = e.Prezioa,
+                        Data = e.Data,
+                        Egoera = e.Egoera,
+                        ZerbitzuaId = entity.Id
+                    };
 
-            return CreatedAtAction(nameof(GetById), new { id = entity.Id }, result);
+                    _session.Save(eskaera);
+                }
+
+                tx.Commit();
+
+                return CreatedAtAction(nameof(GetByMahai), new { mahaiaId = entity.MahaiakId }, new ZerbitzuaDto
+                {
+                    Id = entity.Id,
+                    PrezioTotala = entity.PrezioTotala,
+                    Data = entity.Data,
+                    ErreserbaId = entity.ErreserbaId,
+                    MahaiakId = entity.MahaiakId
+                });
+            }
         }
 
-        // PUT api/Zerbitzua/5
-        [HttpPut("{id:int}")]
-        public IActionResult Update(int id, [FromBody] ZerbitzuaUpdateDto dto)
+        [HttpPost("{id:int}/ordaindu")]
+        public IActionResult Ordaindu(int id)
         {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+            using (var tx = _session.BeginTransaction())
+            {
+                var zerbitzua = _session.Query<Zerbitzua>()
+                    .FirstOrDefault(z => z.Id == id);
 
-            var entity = _repo.GetById(id);
-            if (entity == null) return NotFound();
+                if (zerbitzua == null)
+                    return NotFound("Zerbitzua ez da aurkitu.");
 
-            entity.Izena = dto.Izena;
-            entity.Prezioa = dto.Prezioa;
+                var eskaerak = _session.Query<Eskaerak>()
+                    .Where(e => e.ZerbitzuaId == id)
+                    .ToList();
 
-            _repo.Update(entity);
+                var total = eskaerak.Sum(e => (decimal)(e.Prezioa ?? 0f));
+                zerbitzua.PrezioTotala = (float)total;
 
-            return NoContent();
-        }
+                _session.Update(zerbitzua);
 
-        // DELETE api/Zerbitzua/5
-        [HttpDelete("{id:int}")]
-        public IActionResult Delete(int id)
-        {
-            var entity = _repo.GetById(id);
-            if (entity == null) return NotFound();
+                foreach (var eskaera in eskaerak)
+                {
+                    eskaera.Egoera = 1;
+                    _session.Update(eskaera);
+                }
 
-            _repo.Delete(entity);
+                tx.Commit();
 
-            return NoContent();
+                return Ok(new
+                {
+                    ZerbitzuaId = zerbitzua.Id,
+                    PrezioTotala = zerbitzua.PrezioTotala,
+                    EskaeraKopurua = eskaerak.Count
+                });
+            }
         }
     }
 }

@@ -6,18 +6,19 @@ using NHSessionFactory = NHibernate.ISessionFactory;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // ---- NHIBERNATE ----
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+if (string.IsNullOrWhiteSpace(connectionString))
+{
+    throw new InvalidOperationException("Missing ConnectionStrings:DefaultConnection in appsettings.json");
+}
 
-// Creamos el SessionFactory de NHibernate
 NHSessionFactory sessionFactory = NHibernateHelper.CreateSessionFactory(connectionString);
 
-// Registramos la factoría y la sesión de NHibernate en DI
 builder.Services.AddSingleton<NHSessionFactory>(sessionFactory);
 builder.Services.AddScoped<NHSession>(sp =>
 {
@@ -25,24 +26,31 @@ builder.Services.AddScoped<NHSession>(sp =>
     return factory.OpenSession();
 });
 
-// Repositorio
-builder.Services.AddScoped<LangileakRepository>();
+// Repos (todas las tablas)
+builder.Services.AddScoped<ErabiltzaileakRepository>();
+builder.Services.AddScoped<ErregistroakRepository>();
 builder.Services.AddScoped<ErreserbakRepository>();
-builder.Services.AddScoped<ZerbitzuaRepository>();
 builder.Services.AddScoped<EskaerakRepository>();
+builder.Services.AddScoped<FakturaHistorikoakRepository>();
+builder.Services.AddScoped<FakturakRepository>();
+builder.Services.AddScoped<LangileakRepository>();
+builder.Services.AddScoped<MahaiakRepository>();
+builder.Services.AddScoped<PlateraMotakRepository>();
+builder.Services.AddScoped<PlaterakRepository>();
+builder.Services.AddScoped<ProduktuakRepository>();
+builder.Services.AddScoped<ProduktuenEskaerakRepository>();
+builder.Services.AddScoped<ProduktuenMotakRepository>();
+builder.Services.AddScoped<ZerbitzuaRepository>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-
+app.UseStaticFiles();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using API1.Modeloak;
 using NHibernate.Linq;
@@ -20,37 +20,36 @@ namespace API1.Repositorioak
             return _session.Query<Eskaerak>().ToList();
         }
 
-        public Eskaerak GetById(int id)
+        public Eskaerak? GetById(int id)
         {
             return _session.Get<Eskaerak>(id);
         }
 
-        public void Add(Eskaerak eskaera)
+        public void Add(Eskaerak entity)
         {
             using (var tx = _session.BeginTransaction())
             {
-                _session.Save(eskaera);
+                _session.Save(entity);
                 tx.Commit();
             }
         }
 
-        public void Update(Eskaerak eskaera)
+        public void Update(Eskaerak entity)
         {
             using (var tx = _session.BeginTransaction())
             {
-                _session.Update(eskaera);
+                _session.Update(entity);
                 tx.Commit();
             }
         }
 
-        public void Delete(Eskaerak eskaera)
+        public void Delete(Eskaerak entity)
         {
             using (var tx = _session.BeginTransaction())
             {
-                _session.Delete(eskaera);
+                _session.Delete(entity);
                 tx.Commit();
             }
         }
     }
 }
-

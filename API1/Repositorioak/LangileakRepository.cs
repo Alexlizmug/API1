@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using API1.Modeloak;
 using NHibernate.Linq;
@@ -8,7 +8,6 @@ namespace API1.Repositorioak
 {
     public class LangileakRepository
     {
-        // Usamos el alias NHSession para no chocar con Http.ISession
         private readonly NHSession _session;
 
         public LangileakRepository(NHSession session)
@@ -21,44 +20,36 @@ namespace API1.Repositorioak
             return _session.Query<Langileak>().ToList();
         }
 
-        public Langileak GetById(int id)
+        public Langileak? GetById(int id)
         {
             return _session.Get<Langileak>(id);
         }
 
-        public void Add(Langileak langilea)
+        public void Add(Langileak entity)
         {
             using (var tx = _session.BeginTransaction())
             {
-                _session.Save(langilea);
+                _session.Save(entity);
                 tx.Commit();
             }
         }
 
-        public void Update(Langileak langilea)
+        public void Update(Langileak entity)
         {
             using (var tx = _session.BeginTransaction())
             {
-                _session.Update(langilea);
+                _session.Update(entity);
                 tx.Commit();
             }
         }
 
-        public void Delete(Langileak langilea)
+        public void Delete(Langileak entity)
         {
             using (var tx = _session.BeginTransaction())
             {
-                _session.Delete(langilea);
+                _session.Delete(entity);
                 tx.Commit();
             }
-        }
-
-        public Langileak GetByCredentials(string erabiltzailea, string pasahitza)
-        {
-            return _session.Query<Langileak>()
-                           .FirstOrDefault(l =>
-                               l.Erabiltzailea == erabiltzailea &&
-                               l.Pasahitza == pasahitza);
         }
     }
 }

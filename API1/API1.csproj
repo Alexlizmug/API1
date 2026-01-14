@@ -1,5 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-
+<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
@@ -7,10 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentNHibernate" Version="3.4.1" />
-    <PackageReference Include="MySql.Data" Version="9.5.0" />
-    <PackageReference Include="NHibernate" Version="5.6.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="NHibernate" Version="5.5.1" />
+    <PackageReference Include="FluentNHibernate" Version="3.3.0" />
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
-
 </Project>
