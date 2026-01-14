@@ -51,5 +51,10 @@ namespace API1.Repositorioak
                 tx.Commit();
             }
         }
+
+        //internal object GetByCredentials(string erabiltzailea, string pasahitza)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
