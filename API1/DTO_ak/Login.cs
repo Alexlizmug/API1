@@ -1,4 +1,4 @@
-﻿namespace API1.DTO_ak
+namespace API1.DTO_ak
 {
     public class LoginDto
     {
