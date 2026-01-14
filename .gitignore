@@ -1,5 +1,5 @@
-bin/
-obj/
+API1/bin/
+API1/obj/
 .vs/
 *.user
 *.suo
