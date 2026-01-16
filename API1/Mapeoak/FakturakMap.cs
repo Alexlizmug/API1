@@ -3,7 +3,7 @@ using API1.Modeloak;
 
 namespace API1.Mapeoak
 {
-    public class FakturakMap : ClassMap<Fakturak>
+    public class FakturakMap : ClassMap<Faktura>
     {
         public FakturakMap()
         {

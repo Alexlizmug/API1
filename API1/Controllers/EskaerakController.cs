@@ -95,7 +95,7 @@ namespace API1.Controllers
             if (dto.Prezioa.HasValue) entity.Prezioa = dto.Prezioa;
             if (dto.Data.HasValue) entity.Data = dto.Data;
             if (dto.Egoera.HasValue) entity.Egoera = dto.Egoera;
-            if (dto.ZerbitzuaId.HasValue) entity.ZerbitzuaId = dto.ZerbitzuaId;
+            entity.ZerbitzuaId = dto.ZerbitzuaId;
             if (dto.ProduktuaId.HasValue) entity.ProduktuaId = dto.ProduktuaId.Value;
 
             _repo.Update(entity);

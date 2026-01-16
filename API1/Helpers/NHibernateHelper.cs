@@ -20,7 +20,7 @@ namespace API1.Helpers
                     )
                     .Mappings(m =>
                     {
-                        m.FluentMappings.AddFromAssemblyOf<LangileakMap>();
+                        m.FluentMappings.AddFromAssemblyOf<ZerbitzuaMap>();
                     })
                     .BuildSessionFactory();
             }
@@ -32,9 +32,6 @@ namespace API1.Helpers
 
                 throw new Exception(msg, ex);
             }
-
         }
-    
     }
-
 }

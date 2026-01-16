@@ -2,9 +2,11 @@ namespace API1.DTO_ak
 {
     public class FakturakDto
     {
-        public int Id { get; set; }
-        public float? PrezioTotala { get; set; }
-        public int? Sortuta { get; set; }
-        public string? Path { get; set; }
+        public virtual int Id { get; set; }
+        public virtual int ZerbitzuaId { get; set; }
+        public virtual float? PrezioTotala { get; set; }
+        public virtual bool Sortuta { get; set; }
+        public virtual string Path { get; set; } = string.Empty;
     }
+
 }

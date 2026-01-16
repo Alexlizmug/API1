@@ -1,14 +1,10 @@
-using System;
-
-namespace API1.DTO_ak
+public class EskaerakUpdateDto
 {
-    public class EskaerakUpdateDto
-    {
-        public string? Izena { get; set; }
-        public float? Prezioa { get; set; }
-        public DateTime? Data { get; set; }
-        public int? Egoera { get; set; }
-        public int? ZerbitzuaId { get; set; }
-        public int? ProduktuaId { get; set; }
-    }
+    public virtual int Id { get; set; }
+    public virtual int? ProduktuaId { get; set; }
+    public virtual string Izena { get; set; }
+    public virtual float? Prezioa { get; set; }
+    public virtual DateTime? Data { get; set; }
+    public virtual int? Egoera { get; set; }
+    public virtual int ZerbitzuaId { get; set; }
 }
