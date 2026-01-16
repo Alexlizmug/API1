@@ -15,26 +15,23 @@ namespace API1.Repositorioak
             _session = session;
         }
 
-        public IList<Fakturak> GetAll()
+        public IList<Faktura> GetAll()
         {
-            return _session.Query<Fakturak>().ToList();
+            return _session.Query<Faktura>().ToList();
         }
 
-        public Fakturak? GetById(int id)
+        public Faktura? GetById(int id)
         {
-            return _session.Get<Fakturak>(id);
+            return _session.Get<Faktura>(id);
         }
 
-        public void Add(Fakturak entity)
-        {
-            using (var tx = _session.BeginTransaction())
-            {
-                _session.Save(entity);
-                tx.Commit();
-            }
+        public void Insert(Faktura faktura) {
+            using var tx = _session.BeginTransaction();
+            _session.Save(faktura);
+            tx.Commit();
         }
 
-        public void Update(Fakturak entity)
+        public void Update(Faktura entity)
         {
             using (var tx = _session.BeginTransaction())
             {
@@ -42,8 +39,11 @@ namespace API1.Repositorioak
                 tx.Commit();
             }
         }
+        public Faktura GetByZerbitzuaId(int zerbitzuaId) => 
+            _session.Query<Faktura>().FirstOrDefault(f => f.ZerbitzuaId == zerbitzuaId);
 
-        public void Delete(Fakturak entity)
+
+        public void Delete(Faktura entity)
         {
             using (var tx = _session.BeginTransaction())
             {

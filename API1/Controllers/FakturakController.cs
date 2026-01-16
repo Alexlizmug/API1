@@ -11,90 +11,81 @@ namespace API1.Controllers
     [Route("api/[controller]")]
     public class FakturakController : ControllerBase
     {
-        private readonly FakturakRepository _repo;
+        private readonly ZerbitzuaRepository _zerbitzuaRepo;
+        private readonly FakturakRepository _fakturakRepo;
+        private readonly IWebHostEnvironment _env;
 
-        public FakturakController(FakturakRepository repo)
+        public FakturakController(
+            ZerbitzuaRepository zerbitzuaRepo,
+            FakturakRepository fakturakRepo,
+            IWebHostEnvironment env)
         {
-            _repo = repo;
+            _zerbitzuaRepo = zerbitzuaRepo;
+            _fakturakRepo = fakturakRepo;
+            _env = env;
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<FakturakDto>> GetAll()
+        public ActionResult<IEnumerable<FakturaDto>> GetAll()
         {
-            var list = _repo.GetAll()
-                .Select(e => new FakturakDto
+            var fakturak = _fakturakRepo.GetAll()
+                .Select(f => new FakturaDto
                 {
-                    Id = e.Id,
-                    PrezioTotala = e.PrezioTotala,
-                    Sortuta = e.Sortuta,
-                    Path = e.Path
-                });
+                    Id = f.Id,
+                    ZerbitzuaId = f.ZerbitzuaId,
+                    PrezioTotala = f.PrezioTotala,
+                    Sortuta = f.Sortuta,
+                    Path = f.Path, 
+                }).ToList();
 
-            return Ok(list);
+            return Ok(fakturak);
         }
 
-        [HttpGet("{id:int}")]
-        public ActionResult<FakturakDto> GetById(int id)
+        [HttpPost("from-zerbitzua/{zerbitzuaId}")]
+        public ActionResult<FakturaDto> CreateFromZerbitzua(int zerbitzuaId)
         {
-            var e = _repo.GetById(id);
-            if (e == null) return NotFound();
+            var zerbitzua = _zerbitzuaRepo.GetById(zerbitzuaId);
+            if (zerbitzua == null) return NotFound("Zerbitzua ez da existitzen");
 
-            var dto = new FakturakDto
+            var existing = _fakturakRepo.GetByZerbitzuaId(zerbitzuaId);
+            if (existing != null)
+                return BadRequest("Faktura dagoeneko existitzen da zerbitzu honentzat");
+
+            var faktura = new Faktura
             {
-                Id = e.Id,
-                    PrezioTotala = e.PrezioTotala,
-                    Sortuta = e.Sortuta,
-                    Path = e.Path
+                ZerbitzuaId = zerbitzua.Id,
+                PrezioTotala = zerbitzua.PrezioTotala,
+                Sortuta = false,
+                Path = null
             };
 
-            return Ok(dto);
-        }
+            _fakturakRepo.Insert(faktura);
 
-        [HttpPost]
-        public ActionResult<FakturakDto> Create([FromBody] FakturakSortuDto dto)
-        {
-            var entity = new Fakturak
+            return Ok(new FakturaDto
             {
-                PrezioTotala = dto.PrezioTotala,
-                Sortuta = dto.Sortuta,
-                Path = dto.Path
-            };
-
-            _repo.Add(entity);
-
-            var result = new FakturakDto
-            {
-                Id = entity.Id,
-                    PrezioTotala = entity.PrezioTotala,
-                    Sortuta = entity.Sortuta,
-                    Path = entity.Path
-            };
-
-            return CreatedAtAction(nameof(GetById), new { id = entity.Id }, result);
+                Id = faktura.Id,
+                ZerbitzuaId = faktura.ZerbitzuaId,
+                PrezioTotala = faktura.PrezioTotala,
+                Sortuta = faktura.Sortuta,
+                Path = faktura.Path
+            });
         }
 
-        [HttpPut("{id:int}")]
-        public IActionResult Update(int id, [FromBody] FakturakUpdateDto dto)
+        [HttpGet("{id}/pdf")]
+        public IActionResult DownloadPdf(int id)
         {
-            var entity = _repo.GetById(id);
-            if (entity == null) return NotFound();
+            var faktura = _fakturakRepo.GetById(id);
+            if (faktura == null) return NotFound();
 
-            if (dto.PrezioTotala.HasValue) entity.PrezioTotala = dto.PrezioTotala;
-            if (dto.Sortuta.HasValue) entity.Sortuta = dto.Sortuta;
-            if (!string.IsNullOrEmpty(dto.Path)) entity.Path = dto.Path;
+            var zerbitzua = _zerbitzuaRepo.GetById(faktura.ZerbitzuaId);
+            if (zerbitzua == null) return NotFound();
 
-            _repo.Update(entity);
-            return NoContent();
+            var bytes = PdfHelper.GenerateFakturaPdf(faktura, zerbitzua);
+
+            var fileName = $"Faktura_{faktura.Id}.pdf";
+            return File(bytes, "application/pdf", fileName);
         }
 
-        [HttpDelete("{id:int}")]
-        public IActionResult Delete(int id)
-        {
-            var entity = _repo.GetById(id);
-            if (entity == null) return NotFound();
 
-            _repo.Delete(entity);
-            return NoContent();
-        }
     }
 }
