@@ -42,6 +42,13 @@ namespace API1.Repositorioak
                 tx.Commit();
             }
         }
+        public IList<Eskaerak> GetEskaerakByZerbitzuaId(int zerbitzuaId)
+        {
+            return _session.Query<Eskaerak>()
+                           .Where(e => e.Zerbitzua.Id == zerbitzuaId)
+                           .ToList();
+        }
+
 
         public void Delete(Zerbitzua entity)
         {

@@ -39,8 +39,11 @@ namespace API1.Repositorioak
                 tx.Commit();
             }
         }
-        public Faktura GetByZerbitzuaId(int zerbitzuaId) => 
-            _session.Query<Faktura>().FirstOrDefault(f => f.ZerbitzuaId == zerbitzuaId);
+        public Faktura GetByZerbitzuaId(int zerbitzuaId)
+        {
+            return _session.Query<Faktura>()
+                           .FirstOrDefault(f => f.ZerbitzuaId == zerbitzuaId);
+        }
 
 
         public void Delete(Faktura entity)

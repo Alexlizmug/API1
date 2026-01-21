@@ -17,6 +17,13 @@ namespace API1.Mapeoak
             Map(x => x.Data).Column("data");
             Map(x => x.ErreserbaId).Column("erreserba_id");
             Map(x => x.MahaiakId).Column("mahaiak_id");
+            Map(x => x.Ordainduta).Column("ordainduta");
+
+            HasMany(x => x.Eskaerak)
+                   .KeyColumn("zerbitzua_id")
+                   .Cascade.AllDeleteOrphan()
+                   .Inverse()
+                   .Not.LazyLoad();
         }
     }
 }

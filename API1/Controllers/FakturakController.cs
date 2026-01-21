@@ -35,7 +35,6 @@ namespace API1.Controllers
                     ZerbitzuaId = f.ZerbitzuaId,
                     PrezioTotala = f.PrezioTotala,
                     Sortuta = f.Sortuta,
-                    Path = f.Path, 
                 }).ToList();
 
             return Ok(fakturak);
@@ -56,7 +55,7 @@ namespace API1.Controllers
                 ZerbitzuaId = zerbitzua.Id,
                 PrezioTotala = zerbitzua.PrezioTotala,
                 Sortuta = false,
-                Path = null
+ 
             };
 
             _fakturakRepo.Insert(faktura);
@@ -67,7 +66,6 @@ namespace API1.Controllers
                 ZerbitzuaId = faktura.ZerbitzuaId,
                 PrezioTotala = faktura.PrezioTotala,
                 Sortuta = faktura.Sortuta,
-                Path = faktura.Path
             });
         }
 
@@ -80,12 +78,22 @@ namespace API1.Controllers
             var zerbitzua = _zerbitzuaRepo.GetById(faktura.ZerbitzuaId);
             if (zerbitzua == null) return NotFound();
 
-            var bytes = PdfHelper.GenerateFakturaPdf(faktura, zerbitzua);
+            var eskaera = _zerbitzuaRepo.GetEskaerakByZerbitzuaId(zerbitzua.Id);
 
-            var fileName = $"Faktura_{faktura.Id}.pdf";
-            return File(bytes, "application/pdf", fileName);
+            try
+            {
+                var bytes = PdfHelper.GenerateFakturaPdf(faktura, zerbitzua, eskaera);
+
+                Response.Headers["Content-Disposition"] = $"inline; filename=\'Faktura_{faktura.Id}.pdf\'";
+
+                var stream = new MemoryStream(bytes);
+
+                return new FileStreamResult(stream, "application/pdf");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Errorea PDFa sortzean");
+            }
         }
-
-
     }
 }

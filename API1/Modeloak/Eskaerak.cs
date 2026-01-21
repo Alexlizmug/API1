@@ -6,5 +6,5 @@ public class Eskaerak
     public virtual float? Prezioa { get; set; }
     public virtual DateTime? Data { get; set; }
     public virtual int? Egoera { get; set; }
-    public virtual int ZerbitzuaId { get; set; }
+    public virtual Zerbitzua Zerbitzua { get; set; }
 }

@@ -2,11 +2,10 @@ namespace API1.DTO_ak
 {
     public class ZerbitzuaSortuDto
     {
-        public float PrezioTotala { get; set; }
-        public DateTime? Data { get; set; }
+        public DateTime Data { get; set; }
         public int? ErreserbaId { get; set; }
         public int? MahaiakId { get; set; }
-
-        public List<EskaerakDto> Eskaerak { get; set; } = new();
+        public float PrezioTotala { get; set; }
+        public IList<EskaerakSortuDto> Eskaerak { get; set; } = new List<EskaerakSortuDto>();
     }
 }

@@ -25,6 +25,14 @@ namespace API1.Repositorioak
             return _session.Get<Eskaerak>(id);
         }
 
+        public List<Eskaerak> GetByZerbitzuaId(int zerbitzuaId)
+        {
+            return _session.Query<Eskaerak>()
+                           .Where(e => e.Zerbitzua.Id == zerbitzuaId)
+                           .ToList();
+        }
+
+
         public void Add(Eskaerak entity)
         {
             using (var tx = _session.BeginTransaction())

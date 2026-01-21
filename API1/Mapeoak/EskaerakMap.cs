@@ -13,12 +13,17 @@ namespace API1.Mapeoak
                 .Column("id")
                 .GeneratedBy.Identity();
 
+            Map(x => x.ProduktuaId).Column("produktua_id");
             Map(x => x.Izena).Column("izena");
             Map(x => x.Prezioa).Column("prezioa");
             Map(x => x.Data).Column("data");
             Map(x => x.Egoera).Column("egoera");
-            Map(x => x.ZerbitzuaId).Column("zerbitzua_id");
-            Map(x => x.ProduktuaId).Column("produktua_id");
+
+            References(x => x.Zerbitzua)
+                      .Column("zerbitzua_id")
+                      .Not.Nullable()
+                      .Cascade.None();
+
         }
     }
 }

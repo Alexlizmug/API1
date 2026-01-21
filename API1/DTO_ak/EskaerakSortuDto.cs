@@ -1,10 +1,8 @@
 public class EskaerakSortuDto
 {
-    public virtual int Id { get; set; }
-    public virtual int? ProduktuaId { get; set; }
-    public virtual string Izena { get; set; }
-    public virtual float? Prezioa { get; set; }
-    public virtual DateTime? Data { get; set; }
-    public virtual int? Egoera { get; set; }
-    public virtual int ZerbitzuaId { get; set; }
+    public int ProduktuaId { get; set; }
+    public string Izena { get; set; }
+    public float Prezioa { get; set; }
+    public DateTime Data { get; set; }
+    public int Egoera { get; set; }
 }

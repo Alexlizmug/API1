@@ -12,10 +12,9 @@ namespace API1.Mapeoak
             Id(x => x.Id)
                 .Column("id")
                 .GeneratedBy.Identity();
-
+            Map(x => x.ZerbitzuaId).Column("zerbitzua_id");
             Map(x => x.PrezioTotala).Column("prezio_totala");
             Map(x => x.Sortuta).Column("sortuta");
-            Map(x => x.Path).Column("path");
         }
     }
 }

@@ -6,11 +6,13 @@ using NHSessionFactory = NHibernate.ISessionFactory;
 
 var builder = WebApplication.CreateBuilder(args);
 
+QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// ---- NHIBERNATE ----
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 if (string.IsNullOrWhiteSpace(connectionString))
 {
@@ -26,7 +28,7 @@ builder.Services.AddScoped<NHSession>(sp =>
     return factory.OpenSession();
 });
 
-// Repos (todas las tablas)
+
 builder.Services.AddScoped<ErabiltzaileakRepository>();
 builder.Services.AddScoped<ErregistroakRepository>();
 builder.Services.AddScoped<ErreserbakRepository>();

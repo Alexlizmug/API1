@@ -7,7 +7,8 @@ namespace API1.DTO_ak
         public DateTime? Data { get; set; }
         public int? ErreserbaId { get; set; }
         public int? MahaiakId { get; set; }
+        public bool Ordainduta { get; set; }
 
-        public List<EskaerakDto> Eskaerak { get; set; } = new();
+        public virtual List<EskaerakDto> Eskaerak { get; set; } = new();
     }
 }

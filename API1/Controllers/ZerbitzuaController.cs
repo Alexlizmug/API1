@@ -36,8 +36,8 @@ namespace API1.Controllers
                 Data = z.Data,
                 ErreserbaId = z.ErreserbaId,
                 MahaiakId = z.MahaiakId,
-                Eskaerak = _session.Query<Eskaerak>()
-                    .Where(e => e.ZerbitzuaId == z.Id)
+                Ordainduta = z.Ordainduta,
+                Eskaerak = z.Eskaerak
                     .Select(e => new EskaerakDto
                     {
                         Id = e.Id,
@@ -77,7 +77,7 @@ namespace API1.Controllers
                         Prezioa = e.Prezioa,
                         Data = e.Data,
                         Egoera = e.Egoera,
-                        ZerbitzuaId = entity.Id
+                        Zerbitzua = entity
                     };
 
                     _session.Save(eskaera);
@@ -85,14 +85,16 @@ namespace API1.Controllers
 
                 tx.Commit();
 
-                return CreatedAtAction(nameof(GetByMahai), new { mahaiaId = entity.MahaiakId }, new ZerbitzuaDto
+                var resultDto = new ZerbitzuaDto
                 {
                     Id = entity.Id,
                     PrezioTotala = entity.PrezioTotala,
                     Data = entity.Data,
                     ErreserbaId = entity.ErreserbaId,
                     MahaiakId = entity.MahaiakId
-                });
+                };
+
+                return CreatedAtAction(nameof(GetByMahai), new { mahaiaId = entity.MahaiakId }, resultDto);
             }
         }
 
@@ -101,36 +103,62 @@ namespace API1.Controllers
         {
             using (var tx = _session.BeginTransaction())
             {
-                var zerbitzua = _session.Query<Zerbitzua>()
-                    .FirstOrDefault(z => z.Id == id);
-
-                if (zerbitzua == null)
-                    return NotFound("Zerbitzua ez da aurkitu.");
-
-                var eskaerak = _session.Query<Eskaerak>()
-                    .Where(e => e.ZerbitzuaId == id)
-                    .ToList();
-
-                var total = eskaerak.Sum(e => (decimal)(e.Prezioa ?? 0f));
-                zerbitzua.PrezioTotala = (float)total;
-
-                _session.Update(zerbitzua);
-
-                foreach (var eskaera in eskaerak)
+                try
                 {
-                    eskaera.Egoera = 1;
-                    _session.Update(eskaera);
+                    var zerbitzua = _session.Query<Zerbitzua>().FirstOrDefault(z => z.Id == id);
+                    if (zerbitzua == null)
+                        return NotFound("Zerbitzua ez da aurkitu.");
+
+                    var eskaerak = _session.Query<Eskaerak>()
+                                           .Where(e => e.Zerbitzua.Id == id)
+                                           .ToList();
+
+                    var total = eskaerak.Sum(e => (decimal)(e.Prezioa ?? 0f));
+                    zerbitzua.PrezioTotala = (float)total;
+                    zerbitzua.Ordainduta = true;
+                    _session.Update(zerbitzua);
+
+                    foreach (var eskaera in eskaerak)
+                    {
+                        eskaera.Egoera = 1;
+                        _session.Update(eskaera);
+                    }
+
+                    var fakturaExist = _session.Query<Faktura>().FirstOrDefault(f => f.ZerbitzuaId == id);
+                    Faktura faktura;
+                    if (fakturaExist == null)
+                    {
+                        faktura = new Faktura
+                        {
+                            ZerbitzuaId = zerbitzua.Id,
+                            PrezioTotala = zerbitzua.PrezioTotala,
+                            Sortuta = false,
+                        };
+                        _session.Save(faktura);
+                    }
+                    else
+                    {
+                        faktura = fakturaExist;
+                    }
+
+                    tx.Commit();
+
+                    return Ok(new
+                    {
+                        FakturaId = faktura.Id,
+                        ZerbitzuaId = id,
+                        PrezioTotala = zerbitzua.PrezioTotala,
+                        EskaeraKopurua = eskaerak.Count
+                    });
                 }
-
-                tx.Commit();
-
-                return Ok(new
+                catch (Exception ex)
                 {
-                    ZerbitzuaId = zerbitzua.Id,
-                    PrezioTotala = zerbitzua.PrezioTotala,
-                    EskaeraKopurua = eskaerak.Count
-                });
+                    tx.Rollback();
+                    return StatusCode(500, "Errorea prozesuan: " + ex.Message);
+                }
             }
         }
+
+
     }
 }
