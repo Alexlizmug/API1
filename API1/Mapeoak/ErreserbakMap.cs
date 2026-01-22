@@ -13,10 +13,10 @@ namespace API1.Mapeoak
                 .Column("id")
                 .GeneratedBy.Identity();
 
-            Map(x => x.Data).Column("data");
-            Map(x => x.Mota).Column("mota");
-            Map(x => x.ErabiltzaileakId).Column("erabiltzaileak_id");
-            Map(x => x.MahaiakId).Column("mahaiak_id");
+            Map(x => x.Data).Column("data").Not.Nullable();
+            Map(x => x.Mota).Column("mota").Not.Nullable();
+            Map(x => x.ErabiltzaileakId).Column("erabiltzaileak_id").Nullable();
+            Map(x => x.MahaiakId).Column("mahaiak_id").Not.Nullable();
         }
     }
 }

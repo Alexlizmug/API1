@@ -1,9 +1,13 @@
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.AspNetCore.Mvc;
 using API1.DTO_ak;
 using API1.Modeloak;
-using API1.Repositorioak;
+using Microsoft.AspNetCore.Mvc;
+using NHibernate;
+using NHibernate.Linq;
+using NHSession = NHibernate.ISession;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 
 namespace API1.Controllers
 {
@@ -11,50 +15,36 @@ namespace API1.Controllers
     [Route("api/[controller]")]
     public class ErreserbakController : ControllerBase
     {
-        private readonly ErreserbakRepository _repo;
+        private readonly NHSession _session;
 
-        public ErreserbakController(ErreserbakRepository repo)
+        public ErreserbakController(NHSession session)
         {
-            _repo = repo;
+            _session = session;
         }
-
         [HttpGet]
-        public ActionResult<IEnumerable<ErreserbakDto>> GetAll()
+        public ActionResult<IEnumerable<ErreserbakDto>> Get(DateTime data, bool mota)
         {
-            var list = _repo.GetAll()
-                .Select(e => new ErreserbakDto
-                {
-                    Id = e.Id,
-                    Data = e.Data,
-                    Mota = e.Mota,
-                    ErabiltzaileakId = e.ErabiltzaileakId,
-                    MahaiakId = e.MahaiakId
-                });
+            var erreserbak = _session.Query<Erreserbak>()
+                .Where(e => e.Data.Date == data.Date && e.Mota == mota)
+                .ToList();
 
-            return Ok(list);
-        }
-
-        [HttpGet("{id:int}")]
-        public ActionResult<ErreserbakDto> GetById(int id)
-        {
-            var e = _repo.GetById(id);
-            if (e == null) return NotFound();
-
-            var dto = new ErreserbakDto
+            var dto = erreserbak.Select(e => new ErreserbakDto
             {
                 Id = e.Id,
-                    Data = e.Data,
-                    Mota = e.Mota,
-                    ErabiltzaileakId = e.ErabiltzaileakId,
-                    MahaiakId = e.MahaiakId
-            };
+                Data = e.Data,
+                Mota = e.Mota,
+                ErabiltzaileakId = e.ErabiltzaileakId,
+                MahaiakId = e.MahaiakId
+            });
 
             return Ok(dto);
         }
 
         [HttpPost]
-        public ActionResult<ErreserbakDto> Create([FromBody] ErreserbakSortuDto dto)
+        public IActionResult Create([FromBody] ErreserbakSortuDto dto)
         {
+            using var tx = _session.BeginTransaction();
+
             var entity = new Erreserbak
             {
                 Data = dto.Data,
@@ -63,43 +53,46 @@ namespace API1.Controllers
                 MahaiakId = dto.MahaiakId
             };
 
-            _repo.Add(entity);
+            _session.Save(entity);
+            tx.Commit();
 
-            var result = new ErreserbakDto
-            {
-                Id = entity.Id,
-                    Data = entity.Data,
-                    Mota = entity.Mota,
-                    ErabiltzaileakId = entity.ErabiltzaileakId,
-                    MahaiakId = entity.MahaiakId
-            };
-
-            return CreatedAtAction(nameof(GetById), new { id = entity.Id }, result);
+            return Ok(new { entity.Id });
         }
 
-        [HttpPut("{id:int}")]
-        public IActionResult Update(int id, [FromBody] ErreserbakUpdateDto dto)
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, [FromBody] ErreserbakSortuDto dto)
         {
-            var entity = _repo.GetById(id);
-            if (entity == null) return NotFound();
+            using var tx = _session.BeginTransaction();
 
-            if (dto.Data.HasValue) entity.Data = dto.Data;
-            if (dto.Mota.HasValue) entity.Mota = dto.Mota;
-            if (dto.ErabiltzaileakId.HasValue) entity.ErabiltzaileakId = dto.ErabiltzaileakId.Value;
-            if (dto.MahaiakId.HasValue) entity.MahaiakId = dto.MahaiakId.Value;
+            var entity = _session.Get<Erreserbak>(id);
+            if (entity == null)
+                return NotFound();
 
-            _repo.Update(entity);
-            return NoContent();
+            entity.Data = dto.Data;
+            entity.Mota = dto.Mota;
+            entity.ErabiltzaileakId = dto.ErabiltzaileakId;
+            entity.MahaiakId = dto.MahaiakId;
+
+            _session.Update(entity);
+            tx.Commit();
+
+            return Ok();
         }
 
-        [HttpDelete("{id:int}")]
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var entity = _repo.GetById(id);
-            if (entity == null) return NotFound();
+            using var tx = _session.BeginTransaction();
 
-            _repo.Delete(entity);
-            return NoContent();
+            var entity = _session.Get<Erreserbak>(id);
+            if (entity == null)
+                return NotFound();
+
+            _session.Delete(entity);
+            tx.Commit();
+
+            return Ok();
         }
     }
+
 }

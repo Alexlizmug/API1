@@ -51,5 +51,33 @@ namespace API1.Repositorioak
                 tx.Commit();
             }
         }
+
+        public IList<Erreserbak> GetByDataMota(DateTime data, bool mota)
+        {
+            return _session.Query<Erreserbak>()
+                .Where(e => e.Data.Date == data.Date && e.Mota == mota)
+                .ToList();
+        }
+
+        public bool mahaiaAske(int mahaiaId, DateTime data, bool mota)
+        {
+            return !_session.Query<Erreserbak>()
+                .Any(e => e.MahaiakId == mahaiaId && e.Data.Date == data.Date && e.Mota == mota);
+        }
+
+        public Erreserbak? GetByMahaiaData(int mahaiaId, DateTime data, bool mota)
+        {
+            return _session.Query<Erreserbak>()
+                .FirstOrDefault(e => e.MahaiakId == mahaiaId && e.Data.Date == data.Date && e.Mota == mota);
+        }
+
+        public HashSet<int> LortuMahaiakOkupatuta(DateTime data, bool mota)
+        {
+            return _session.Query<Erreserbak>()
+                .Where(e => e.Data.Date == data.Date && e.Mota == mota)
+                .Select(e => e.MahaiakId)
+                .ToHashSet();
+        }
+
     }
 }
