@@ -9,5 +9,6 @@ namespace API1.DTO_ak
         public string? Email { get; set; }
         public string? Telefonoa { get; set; }
         public int? Baimena { get; set; }
+        public int? MahaiakId  { get; set; }
     }
 }

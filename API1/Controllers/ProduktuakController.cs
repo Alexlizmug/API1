@@ -22,14 +22,16 @@ namespace API1.Controllers
         public ActionResult<IEnumerable<ProduktuakDto>> GetAll()
         {
             var list = _repo.GetAll()
-                .Select(e => new ProduktuakDto
+                .Select(p => new ProduktuakDto
                 {
-                    Id = e.Id,
-                    Izena = e.Izena,
-                    Prezioa = e.Prezioa,
-                    Stock = e.Stock,
-                    IrudiaPath = e.IrudiaPath,
-                    ProduktuenMotakId = e.ProduktuenMotakId
+                    Id = p.Id,
+                    Izena = p.Izena,
+                    Prezioa = p.Prezioa,
+                    Stock = p.Stock,
+                    stock_min = p.stock_min,
+                    stock_max = p.stock_max,
+                    Irudia = p.Irudia,
+                    ProduktuenMotakId = p.ProduktuenMotakId
                 });
 
             return Ok(list);
@@ -47,7 +49,7 @@ namespace API1.Controllers
                     Izena = e.Izena,
                     Prezioa = e.Prezioa,
                     Stock = e.Stock,
-                    IrudiaPath = e.IrudiaPath,
+                    Irudia = e.Irudia,
                     ProduktuenMotakId = e.ProduktuenMotakId
             };
 
@@ -62,7 +64,7 @@ namespace API1.Controllers
                 Izena = dto.Izena,
                 Prezioa = dto.Prezioa,
                 Stock = dto.Stock,
-                IrudiaPath = dto.IrudiaPath,
+                Irudia = dto.Irudia,
                 ProduktuenMotakId = dto.ProduktuenMotakId
             };
 
@@ -74,7 +76,7 @@ namespace API1.Controllers
                     Izena = entity.Izena,
                     Prezioa = entity.Prezioa,
                     Stock = entity.Stock,
-                    IrudiaPath = entity.IrudiaPath,
+                    Irudia = entity.Irudia,
                     ProduktuenMotakId = entity.ProduktuenMotakId
             };
 
@@ -90,7 +92,7 @@ namespace API1.Controllers
             if (!string.IsNullOrEmpty(dto.Izena)) entity.Izena = dto.Izena;
             if (dto.Prezioa.HasValue) entity.Prezioa = dto.Prezioa;
             if (dto.Stock.HasValue) entity.Stock = dto.Stock;
-            if (!string.IsNullOrEmpty(dto.IrudiaPath)) entity.IrudiaPath = dto.IrudiaPath;
+            if (!string.IsNullOrEmpty(dto.Irudia)) entity.Irudia = dto.Irudia;
             if (dto.ProduktuenMotakId.HasValue) entity.ProduktuenMotakId = dto.ProduktuenMotakId.Value;
 
             _repo.Update(entity);

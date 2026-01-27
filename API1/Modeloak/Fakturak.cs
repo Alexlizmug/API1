@@ -7,7 +7,6 @@ namespace API1.Modeloak
         public virtual int Id { get; set; }
         public virtual int ZerbitzuaId { get; set; }
         public virtual float PrezioTotala { get; set; }
-        public virtual bool Sortuta { get; set; } 
     }
 
 }

@@ -79,7 +79,18 @@ namespace API1.Controllers
                         Egoera = e.Egoera,
                         Zerbitzua = entity
                     };
+                    var produktua = _session.Query<Produktuak>()
+                                            .FirstOrDefault(p => p.Id == e.ProduktuaId);
 
+                    if (produktua == null)
+                        return BadRequest($"Produktua ez da existitzen: {e.ProduktuaId}");
+
+                    var stock = produktua.Stock ?? 0;
+                    if (stock <= 0)
+                        return BadRequest($"Stock gabe: {produktua.Izena}");
+
+                    produktua.Stock = stock - 1;
+                    _session.Update(produktua);
                     _session.Save(eskaera);
                 }
 
@@ -132,7 +143,6 @@ namespace API1.Controllers
                         {
                             ZerbitzuaId = zerbitzua.Id,
                             PrezioTotala = zerbitzua.PrezioTotala,
-                            Sortuta = false,
                         };
                         _session.Save(faktura);
                     }

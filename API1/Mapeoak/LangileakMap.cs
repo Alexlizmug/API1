@@ -20,6 +20,7 @@ namespace API1.Mapeoak
             Map(x => x.Email).Column("email");
             Map(x => x.Telefonoa).Column("telefonoa");
             Map(x => x.Baimena).Column("baimena");
+            Map(x => x.MahaiakId).Column("mahaiak_id");
         }
     }
 }
