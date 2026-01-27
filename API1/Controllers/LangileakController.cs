@@ -31,7 +31,8 @@ namespace API1.Controllers
                     Pasahitza = e.Pasahitza,
                     Email = e.Email,
                     Telefonoa = e.Telefonoa,
-                    Baimena = e.Baimena
+                    Baimena = e.Baimena,
+                    MahaiakId = e.MahaiakId
                 });
 
             return Ok(list);
@@ -52,7 +53,8 @@ namespace API1.Controllers
                     Pasahitza = e.Pasahitza,
                     Email = e.Email,
                     Telefonoa = e.Telefonoa,
-                    Baimena = e.Baimena
+                    Baimena = e.Baimena,
+                    MahaiakId = e.MahaiakId
             };
 
             return Ok(dto);
@@ -83,7 +85,8 @@ namespace API1.Controllers
                     Pasahitza = entity.Pasahitza,
                     Email = entity.Email,
                     Telefonoa = entity.Telefonoa,
-                    Baimena = entity.Baimena
+                    Baimena = entity.Baimena,
+                    MahaiakId = entity.MahaiakId
             };
 
             return CreatedAtAction(nameof(GetById), new { id = entity.Id }, result);
@@ -102,6 +105,7 @@ namespace API1.Controllers
             if (!string.IsNullOrEmpty(dto.Email)) entity.Email = dto.Email;
             if (!string.IsNullOrEmpty(dto.Telefonoa)) entity.Telefonoa = dto.Telefonoa;
             if (dto.Baimena.HasValue) entity.Baimena = dto.Baimena;
+            
 
             _repo.Update(entity);
             return NoContent();
@@ -122,24 +126,25 @@ namespace API1.Controllers
         [HttpPost("login")]
         public ActionResult<LangileakDto> Login([FromBody] LoginRequest req)
         {
-            // Repo-ak GetAll() badauka, hortik bilatu dezakezu (momentuz nahikoa)
+            
             var e = _repo.GetAll()
                 .FirstOrDefault(x => x.Erabiltzailea == req.erabiltzailea
                                   && x.Pasahitza == req.pasahitza);
 
             if (e == null) return Unauthorized(); // 401
 
-            // GOMENDIOA: ez itzuli pasahitza
+            
             var dto = new LangileakDto
             {
                 Id = e.Id,
                 Izena = e.Izena,
                 Abizena = e.Abizena,
                 Erabiltzailea = e.Erabiltzailea,
-                Pasahitza = null,          // edo kendu DTO-tik
+                Pasahitza = null,          
                 Email = e.Email,
                 Telefonoa = e.Telefonoa,
-                Baimena = e.Baimena
+                Baimena = e.Baimena,
+                MahaiakId = e.MahaiakId
             };
 
             return Ok(dto);

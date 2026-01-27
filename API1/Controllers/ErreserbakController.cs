@@ -8,7 +8,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace API1.Controllers
 {
     [ApiController]
@@ -21,6 +20,7 @@ namespace API1.Controllers
         {
             _session = session;
         }
+
         [HttpGet]
         public ActionResult<IEnumerable<ErreserbakDto>> Get(DateTime data, bool mota)
         {
@@ -59,14 +59,24 @@ namespace API1.Controllers
             return Ok(new { entity.Id });
         }
 
-        [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody] ErreserbakSortuDto dto)
+        [HttpPut("mahaia/{mahaiaId}")]
+        public IActionResult UpdateByMahai(
+            int mahaiaId,
+            [FromQuery] DateTime data,
+            [FromQuery] bool mota,
+            [FromBody] ErreserbakSortuDto dto)
+
         {
             using var tx = _session.BeginTransaction();
 
-            var entity = _session.Get<Erreserbak>(id);
+            var entity = _session.Query<Erreserbak>()
+                .FirstOrDefault(e =>
+                    e.MahaiakId == mahaiaId &&
+                    e.Data.Date == data.Date &&
+                    e.Mota == mota);
+
             if (entity == null)
-                return NotFound();
+                return NotFound("Ez da erreserbarik aurkitu.");
 
             entity.Data = dto.Data;
             entity.Mota = dto.Mota;
@@ -79,20 +89,24 @@ namespace API1.Controllers
             return Ok();
         }
 
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        [HttpDelete("mahaia/{mahaiaId}")]
+        public IActionResult DeleteByMahai(int mahaiaId, [FromQuery] DateTime data, [FromQuery] bool mota)
         {
             using var tx = _session.BeginTransaction();
 
-            var entity = _session.Get<Erreserbak>(id);
+            var entity = _session.Query<Erreserbak>()
+                .FirstOrDefault(e =>
+                    e.MahaiakId == mahaiaId &&
+                    e.Data.Date == data.Date &&
+                    e.Mota == mota);
+
             if (entity == null)
-                return NotFound();
+                return NotFound("Ez da erreserbarik aurkitu.");
 
             _session.Delete(entity);
             tx.Commit();
 
-            return Ok();
+            return Ok("Erreserba ezabatuta.");
         }
     }
-
 }

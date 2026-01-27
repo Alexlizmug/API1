@@ -10,5 +10,6 @@ namespace API1.Modeloak
         public virtual string? Email { get; set; }
         public virtual string? Telefonoa { get; set; }
         public virtual int? Baimena { get; set; }
+        public virtual int? MahaiakId { get; set; }
     }
 }

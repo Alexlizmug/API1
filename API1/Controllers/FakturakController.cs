@@ -34,7 +34,6 @@ namespace API1.Controllers
                     Id = f.Id,
                     ZerbitzuaId = f.ZerbitzuaId,
                     PrezioTotala = f.PrezioTotala,
-                    Sortuta = f.Sortuta,
                 }).ToList();
 
             return Ok(fakturak);
@@ -54,7 +53,6 @@ namespace API1.Controllers
             {
                 ZerbitzuaId = zerbitzua.Id,
                 PrezioTotala = zerbitzua.PrezioTotala,
-                Sortuta = false,
  
             };
 
@@ -65,7 +63,6 @@ namespace API1.Controllers
                 Id = faktura.Id,
                 ZerbitzuaId = faktura.ZerbitzuaId,
                 PrezioTotala = faktura.PrezioTotala,
-                Sortuta = faktura.Sortuta,
             });
         }
 

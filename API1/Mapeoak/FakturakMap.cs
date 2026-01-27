@@ -14,7 +14,6 @@ namespace API1.Mapeoak
                 .GeneratedBy.Identity();
             Map(x => x.ZerbitzuaId).Column("zerbitzua_id");
             Map(x => x.PrezioTotala).Column("prezio_totala");
-            Map(x => x.Sortuta).Column("sortuta");
         }
     }
 }
