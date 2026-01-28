@@ -7,23 +7,22 @@ using QuestPDF.Drawing;
 using QuestPDF.Previewer;
 using QuestPDF.Elements;
 using NHibernate.Hql.Ast;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 
 public static class PdfHelper
 {
     public static byte[] GenerateFakturaPdf(Faktura faktura, Zerbitzua zerbitzua, IList<Eskaerak> eskaera)
     {
-        var logoa = Image.FromFile("wwwroot/irudiak/sushineli.png");
         var document = Document.Create(container =>
         {
             container.Page(page =>
             {
                 page.Margin(10);
-                page.Size(PageSizes.A4);
+                page.ContinuousSize(164);
                 page.DefaultTextStyle(x => x.FontSize(12).FontColor("#373F47"));
                 page.Header().Column(col =>
                 {
-                    col.Item().AlignLeft().Width(150).Image(logoa);
                     col.Item().Text("Tricode Software S.L.").Bold().FontSize(18).FontColor("#373F47");
                 });
 
@@ -48,9 +47,7 @@ public static class PdfHelper
 
                     col.Item().Text("Tricode Software S.L.-k faktura honetan jasotako zerbitzu guztiak kalitate-estandar" +
                         "zorrotzen arabera eskaini direla bermatzen du. Bezeroen datuen pribatutasuna zaintzen dugu eta" +
-                        "indarreko araudi guztia betetzen dugu datuen babesari dagokionez." +
-                        "Fakturarekin lotutako edozein zalantza, aldaketa edo argibide behar izanez gero gure" +
-                        "bezero-arreeta taldearekin harremanetan jar zaitezke. Pozik lagunduko zaitugu.");
+                        "indarreko araudi guztia betetzen dugu datuen babesari dagokionez.");
 
                     col.Item().LineHorizontal(1).LineColor("#E9C4C7");
 
